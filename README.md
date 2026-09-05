@@ -6,20 +6,25 @@
 
 ```
 dsh-skills/
-├── blog/                    # 系列博客正文
-│   └── rag_from_zero_part1.md   # 第一篇：架构、链路与快速搭建
-├── assets/                  # 架构图（PNG + 生成源码）
-│   ├── diagram_1_layers.png     # 分层架构
-│   ├── diagram_2_pipeline.png   # 一份文件的旅程（数据链路）
-│   ├── diagram_3_etl.png        # ETL 流水线拆解
-│   └── make_diagrams.py         # 图表生成源码（仅依赖 matplotlib）
-└── demo/                    # 零依赖 mini RAG（纯 Python 标准库）
-    ├── start.sh                 # 一键启动：环境检查→入库对账→检索冒烟
-    ├── config.py                # 参数唯一真源（分片/向量/检索参数集中在此）
-    ├── demo_ingest.py           # ETL：校验→清洗→分片→向量化→三写落库→对账
-    ├── demo_search.py           # 检索：BM25∥向量→RRF融合→上下文组装
-    ├── smoke_test.py            # 冒烟测试
-    └── corpus/                  # 示例语料（3 种格式）
+├── blog/                        # 系列博客正文
+│   ├── rag_from_zero_part1.md       # 第一篇：架构、链路与快速搭建
+│   └── rag_from_zero_part2.md       # 第二篇：调优实战（六案例）
+├── assets/                      # 架构图（PNG + 生成源码）
+│   ├── diagram_1_layers.png         # 分层架构
+│   ├── diagram_2_pipeline.png       # 一份文件的旅程（数据链路）
+│   ├── diagram_3_etl.png            # ETL 流水线拆解
+│   ├── diagram_4_chunking.png       # 分片水位标定（调优）
+│   ├── diagram_5_troubleshoot.png   # 排查决策树（调优）
+│   ├── diagram_6_gains.png          # 六案例收益总览（调优）
+│   ├── make_diagrams.py             # 第一篇图表生成源码
+│   └── make_diagrams_p2.py          # 第二篇图表生成源码
+└── demo/                        # 零依赖 mini RAG（纯 Python 标准库）
+    ├── start.sh                     # 一键启动：环境检查→入库对账→检索冒烟
+    ├── config.py                    # 参数唯一真源（分片/向量/检索参数集中在此）
+    ├── demo_ingest.py               # ETL：校验→清洗→分片→向量化→三写落库→对账
+    ├── demo_search.py               # 检索：BM25∥向量→RRF融合→上下文组装
+    ├── smoke_test.py                # 冒烟测试
+    └── corpus/                      # 示例语料（3 种格式）
 ```
 
 ## 30 秒跑通
@@ -37,7 +42,7 @@ bash start.sh --rebuild                # 清掉派生数据全量重建
 ## 系列
 
 - **第一篇（已发布）**：[架构、链路与快速搭建](blog/rag_from_zero_part1.md)
-- 第二篇（写作中）：调优实战——六个真实案例：问题 → 排查 → 根因 → 参数 → 实测收益
+- **第二篇（已发布）**：[调优实战：六个真实案例](blog/rag_from_zero_part2.md)——现象→排查→根因→参数→实测收益
 
 ## License
 
